@@ -5,8 +5,8 @@ readme:      "./README.md"
 args: {
 	// Name of the database to create. Defaults to "instance"
 	dbName: "piwigo"
-  // Provide user for mysql. If the value is not provided, it will default to 
-  user: "piwigo"
+        // Provide user for mysql. If the value is not provided, it will default to 
+        user: "piwigo"
 	// Provide password for mysql user. If the value is not provided, it will default to 
 	password: "secret-password"
 }
