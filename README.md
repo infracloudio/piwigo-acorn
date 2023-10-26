@@ -13,7 +13,7 @@ You can deploy the Piwigo app on the Acorn SaaS Platform with following simple s
   * Select "From Acorn Image" to deploy the sample Flask Application and select its Image
   * Provide any random name such as `piwigo-app` and keeping Project's default Region, type in the below Acorn image and choose Create 
     ```bash
-    ghcr.io/infracloudio/piwigo-acorn:v13.8.0-0
+    ghcr.io/infracloudio/piwigo-acorn:v#.#.#-#
     ```
 4. Now the sample App is provisioned on Acorn SaaS Platform and is available for 2hrs. Upgrade to pro account to keep it running longer.
 5. Once the Acorn is running, you can access it by clicking the Endpoint or the redirect link.
