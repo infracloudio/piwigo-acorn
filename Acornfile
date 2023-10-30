@@ -1,6 +1,7 @@
 name:        "Piwigo Sample Acorn"
 description: "Acorn running a sample Piwigo app"
 readme:      "./README.md"
+icon:        "./piwigo_icon.webp"
 
 args: {
 	// Name of the database to create. Defaults to "instance"
