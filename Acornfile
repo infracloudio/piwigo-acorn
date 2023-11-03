@@ -3,13 +3,19 @@ description: "Acorn running a sample Piwigo app"
 readme:      "./README.md"
 icon:        "./piwigo_icon.webp"
 
+services: db: {
+    image: "ghcr.io/acorn-io/mariadb:v10.#.#-#" // pulls the latest 10.x.x version
+    serviceArgs: {
+        dbName: args.dbName
+        username: args.user
+    }
+}
+
 args: {
 	// Name of the database to create. Defaults to "instance"
 	dbName: "piwigo"
   	// Provide user for mysql. If the value is not provided, it will default to 
   	user: "piwigo"
-	// Provide password for mysql user. If the value is not provided, it will default to 
-	password: "secret-password"
 }
 
 containers: {
@@ -20,23 +26,11 @@ containers: {
     "PGID": "1000"
     "TZ": "Etc/UTC"
     }
+    consumes: ["db"]
     ports: publish: "80/http"
     dirs: {
         "/config": "volume://config-data"
         "/gallery": "volume://gallery-data"
-    }
-  }
-  db: {
-    image: "mysql"
-    env: {
-      "MYSQL_ROOT_PASSWORD": "@{secrets.admin.password}"
-      "MYSQL_DATABASE": args.dbName
-      "MYSQL_USER": args.user
-      "MYSQL_PASSWORD": args.password 
-    }
-    ports: expose: "3306/http"
-    dirs: {
-        "/var/lib/mysql": "volume://piwigo-db"
     }
   }
 }   
@@ -45,11 +39,4 @@ volumes: {
   "config-data": {}
   "gallery-data": {}
   "piwigo-db": {}
-}
-
-secrets: admin: {
-	name:        "Admin user credentials"
-	description: "Credentials for the admin user with full control over the database server"
-	type:        "basic"
-	data: username: "root"
 }
