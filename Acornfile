@@ -4,33 +4,33 @@ readme:      "./README.md"
 icon:        "./piwigo_icon.webp"
 
 services: db: {
-    image: "ghcr.io/acorn-io/mariadb:v10.#.#-#" // pulls the latest 10.x.x version
-    serviceArgs: {
-        dbName: args.dbName
-        username: args.user
-    }
+  image: "ghcr.io/acorn-io/mariadb:v10.#.#-#" // pulls the latest 10.x.x version
+  serviceArgs: {
+    dbName: args.dbName
+    username: args.user
+  }
 }
 
 args: {
 	// Name of the database to create. Defaults to "instance"
 	dbName: "piwigo"
-  	// Provide user for mysql. If the value is not provided, it will default to 
-  	user: "piwigo"
+  // Provide user for mysql. If the value is not provided, it will default to 
+  user: "piwigo"
 }
 
 containers: {
   app: {
-   image: "ghcr.io/linuxserver/piwigo:13.8.0"
-   env: {
-    "PUID": "1000"
-    "PGID": "1000"
-    "TZ": "Etc/UTC"
+    image: "ghcr.io/linuxserver/piwigo:13.8.0"
+    env: {
+      "PUID": "1000"
+      "PGID": "1000"
+      "TZ": "Etc/UTC"
     }
     consumes: ["db"]
     ports: publish: "80/http"
     dirs: {
-        "/config": "volume://config-data"
-        "/gallery": "volume://gallery-data"
+      "/config": "volume://config-data"
+      "/gallery": "volume://gallery-data"
     }
   }
 }   
