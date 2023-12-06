@@ -40,34 +40,34 @@ There are two ways you can try this sample application.
 - Using Acorn platform dashboard.
 - Using CLI
 
-The first way is the easiest one where, in just a few clicks you can deploy the Piwigo application to the platform and start using it. However, if you want to customize the application or want to understand how you can run your own Flask applications using Acorn, use the second option.
+The first way is the easiest one where, in just a few clicks you can deploy the Piwigo application to the platform and start using it. However, if you want to customize the application or want to understand how you can run your own Piwigo applications using Acorn, use the second option.
 
 ## Running Piwigo application using Dashboard
 
-We can run our application from an existing image from the Acorn Cloud Platform UI by clicking on the _”Create Acorns”_ button.
+We can run our application from an existing image from the Acorn Cloud Platform UI by clicking on the _”Deploy Acorns”_ button.
 
 Choose the source for deploying your Acorns
 ![create-acorn-options-screen](https://necessary-creativity-bc071c3082.media.strapiapp.com/create_acorn_options_280ce1aeb1.png)
 
-On the “Create Acorns” page, provide a name such as piwigo-sample-app and keeping Project's default Region, type in the below Pre-built Acorn image or your own Acorn Image and choose Create.
+On the “Deploy an Acorn” page, provide a name such as piwigo-sample-app and type in the below Pre-built Acorn image and choose Create.
 
-```
+> Note: If you have your own custom Acorn image, you can also provide that.
+
+```sh
 ghcr.io/infracloudio/piwigo-acorn:v13.8.0-0
 ```
 
 ![piwigo-select-image](https://necessary-creativity-bc071c3082.media.strapiapp.com/piwigo_select_image_c1570e4048.png)
 
-Now the sample App is provisioned on Acorn Cloud Platform and is available for 2 hrs. Upgrade to Enterprise account to keep it running longer.
+Now, the sample application has been provisioned on the Acorn Platform and is available for Two hours. You can choose to upgrade to an enterprise account to keep it running longer.
 
 ![Deploying App](./img/deploying-app.png)
 
-Once the Acorn is running, you can access it by clicking the Endpoint or the redirect link.
+Once the Acorn status comes to `Running`, you can open up the Piwigo application on the given endpoint link, showing below three vertical dots, right after running status.
 
-![Application Endpoint](./img/live-application.png)
+## Running the Piwigo application using acorn CLI
 
-## Running the Piwigo Application using acorn CLI
-
-As mentioned previously, running the acorn application using CLI lets you understand Acorn and the Acornfile. You can also customize the Piwigo app to your requirement or use your Acorn knowledge to run your own Piwigo application.
+Running your own customized Piwigo through the CLI method is a great way to understand Acornfile. Additionally, you can customize the Piwigo app according to your requirements, or apply your Acorn knowledge to operate your own Piwigo application.
 
 To run the Piwigo app using CLI, let’s start by cloning its source repository.
 
@@ -138,6 +138,17 @@ volumes: {
   "piwigo-db": {}
 }
 ```
+
+Here’s a quick description of the Acornfile above. For a full overview of the Acornfile spec please see Acorn [documentation](https://docs.acorn.io/authoring/overview).
+
+- `containers`: section describes the set of containers your Acorn app consists of.
+- `ports`: using the publish type, we expose the app outside the cluster using an auto-generated ingress resource
+- `dirs`: Directories to mount into the container filesystem
+- `services`: defines cloud services that will be provisioned for your application.
+- `args`: this allowes allow users to provide input at different points in the Acorn lifecycle.
+- `env`: environment variables, referencing a secret or referencing an Acorn argument
+- `volumes`: define volumes which will be bounded to containers, sidecars, or jobs, wherever the persistence is required.
+- `consumes`: It helps in defining which service is required for container to run.
 
 ### Deploy your Application
 
