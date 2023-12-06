@@ -1,14 +1,16 @@
-[Piwigo](https://piwigo.com/) is an open source photo gallery software to manage, organise and publish your digital content. It is a Digital Asset Manager (DAM) helping you centralise all your digital media (photos, logos, videos, documents, etc.) in one web portal. Today, we will explore how you can deploy your own Piwigo photo gallery website using Acorns.
+# Building Your Online Gallery using Piwigo on Acron
 
-Acorn is an app platform that simplifies building, sharing and deploying containerized apps. With Acorn, you can encapsulate your entire application and its dependencies in a single file known as an Acornfile. This Acornfile enables to package your application into an OCI container image and deploy on cloud-native environments.
+Photographs have always held a special place in our hearts, serving as portals to the past, brimming with vibrant colors. With the constant influx of new photos, have you ever felt overwhelmed trying to organize them? Or perhaps you've considered creating an online gallery but were intimidated by the technical complexities? You're not alone. This is where Piwigo, an open-source Digital Asset Manager (DAM), becomes invaluable. It acts as a digital librarian, bringing order to your digital collection, whether it’s family photos, professional portfolios, or a diverse range of logos and documents, all accessible through a sleek web interface.
 
-[Acorn Cloud Platform](https://beta.acorn.io/) lets you run your acorns in free [sandbox environment](https://docs.acorn.io/sandbox). You can also share this nifty artifact with a link, making it a breeze for you to deploy with just a single click into your very own sandbox environment. You can run your Acorns as often as you like for upto 2hrs to evaluate and experiment your application. If you wish to [run your Production workloads](https://docs.acorn.io/aws/overview), upgrade to a teams and enterprise plan to deploy and manage applications in your AWS account.
+Understanding the potential of Piwigo is one thing, but implementing it can be daunting, often involving complex deployment configurations and overwhelming technicalities. This is where Acorn steps in to offer a solution. Acorn is an app platform designed to simplify the building, sharing, and deploying of containerized apps. It allows you to encapsulate your entire application, along with its dependencies, into a single file known as an Acornfile. With Acorn, packaging your application into an OCI container image and deploying it becomes straightforward, often requiring just a single click. Let’s explore Acorn in detail before delving into how to run Piwigo with it.
+
+[Acorn Cloud Platform](https://beta.acorn.io/) lets you run your acorns in free [sandbox environment](https://docs.acorn.io/sandbox). You can also share nifty artifact with a link, making it a breeze for you to deploy with just a single click into your very own sandbox environment. You can run your Acorns as often as you like for upto 2hrs to evaluate and experiment your application. If you wish to [run your Production workloads](https://docs.acorn.io/aws/overview), upgrade to a teams and enterprise plan to deploy and manage applications in your AWS account.
 
 If you are looking to get started on the Acorn Platform and give the Piwigo application a whirl, just hit that link below and have a peek!
 
 [![Run in Acorn](https://beta.acorn.io/v1-ui/run/badge?image=ghcr.io+infracloudio+piwigo-acorn:v13.8.0-0&ref=aashimodi14)](https://beta.acorn.io/run/ghcr.io/infracloudio/piwigo-acorn:v13.8.0-0?ref=aashimodi14&name=piwigo-sample-app)
 
-To learn how to write your own Acornfile to deploy Piwigo or further customise to integrate in your webiste, follow along:
+To learn how to write your own Acornfile to deploy Piwigo or further customise, follow along:
 
 > _Note: Everything shown in this tutorial can be found in [this repository](https://github.com/infracloudio/piwigo-acorn)._
 
