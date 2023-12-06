@@ -155,7 +155,7 @@ Once the application is running successfully, it will output a URL for the appli
 
 Once you follow one of the above methods of deploying the Piwigo, you’ll get a endpoint in the Acorn dashboard or in the CLI output, that will help you reach to your application in browser.
 
-For sample deployment the endpoint url is `https://piwigo-application-80517a74.ccx3c8.on-acorn.io/`
+For this sample deployment the endpoint url is `https://piwigo-application-80517a74.ccx3c8.on-acorn.io/`
 
 Before you began using the Piwigo, it requires one time installation, which will happen once you open the provided endpoint, it should automatically redirect to installation page.
 
@@ -227,7 +227,7 @@ After, login you can build, tag and push the image using the below command.
 acorn build -t ghcr.io/infracloudio/piwigo-acorn:v0.0.0.1 --push
 ```
 
-What's Next?
+## What's Next?
 
 1. Any app provisioned under Acorn sandbox region is available for only 2hrs, in order to keep it running longer you need to upgrade to Pro account.
 2. After deploying you can edit the Acorn Application or remove it if no longer needed. Click the Edit option to edit your Acorn's Image. Toggle the Advanced Options switch for additional edit options.
