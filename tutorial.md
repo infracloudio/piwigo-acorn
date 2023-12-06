@@ -139,7 +139,7 @@ volumes: {
 }
 ```
 
-Here’s a quick description of the Acornfile above. For a full overview of the Acornfile spec please see Acorn [documentation](https://docs.acorn.io/authoring/overview).
+Here’s a quick description of the Acornfile above. For a full overview of the Acornfile specification please see Acorn [documentation](https://docs.acorn.io/authoring/overview).
 
 - `containers`: section describes the set of containers your Acorn app consists of.
 - `ports`: using the publish type, we expose the app outside the cluster using an auto-generated ingress resource
