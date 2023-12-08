@@ -4,11 +4,11 @@ Photographs have always held a special place in our hearts, serving as portals t
 
 Understanding the potential of Piwigo is one thing, but implementing it can be daunting, often involving complex deployment configurations and overwhelming technicalities. This is where Acorn steps in to offer a solution. Acorn is an app platform designed to simplify the building, sharing, and deploying of containerized apps. It allows you to encapsulate your entire application, along with its dependencies, into a single file known as an Acornfile. With Acorn, packaging your application into an OCI container image and deploying it becomes straightforward, often requiring just a single click. Let’s explore Acorn in detail before delving into how to run Piwigo with it.
 
-[Acorn Cloud Platform](https://beta.acorn.io/) lets you run your acorns in free [sandbox environment](https://docs.acorn.io/sandbox). You can also share nifty artifact with a link, making it a breeze for you to deploy with just a single click into your very own sandbox environment. You can run your Acorns as often as you like for upto 2hrs to evaluate and experiment your application. If you wish to [run your Production workloads](https://docs.acorn.io/aws/overview), upgrade to a teams and enterprise plan to deploy and manage applications in your AWS account.
+[Acorn Cloud Platform](https://www.acorn.io/) lets you run your acorns in free [sandbox environment](https://docs.acorn.io/sandbox). You can also share nifty artifact with a link, making it a breeze for you to deploy with just a single click into your very own sandbox environment. You can run your Acorns as often as you like for upto 2hrs to evaluate and experiment your application. If you wish to [run your Production workloads](https://docs.acorn.io/aws/overview), upgrade to a teams and enterprise plan to deploy and manage applications in your AWS account.
 
 If you are looking to get started on the Acorn Platform and give the Piwigo application a whirl, just hit that link below and have a peek!
 
-[![Run in Acorn](https://beta.acorn.io/v1-ui/run/badge?image=ghcr.io+infracloudio+piwigo-acorn:v13.8.0-0&ref=aashimodi14)](https://beta.acorn.io/run/ghcr.io/infracloudio/piwigo-acorn:v13.8.0-0?ref=aashimodi14&name=piwigo-sample-app)
+[![Run in Acorn](https://acorn.io/v1-ui/run/badge?image=ghcr.io+infracloudio+piwigo-acorn:v%23.%23.%23-%23&ref=samkulkarni20)](https://acorn.io/run/ghcr.io/infracloudio/piwigo-acorn:v%23.%23.%23-%23?ref=samkulkarni20)
 
 To learn how to write your own Acornfile to deploy Piwigo or further customise, follow along:
 
@@ -21,14 +21,14 @@ To learn how to write your own Acornfile to deploy Piwigo or further customise, 
 
 ## Acorn Login
 
-Login to the [Acorn Platform](http://beta.acorn.io) using the Github Sign-In option with your Github user.
+Login to the [Acorn Platform](http://www.acorn.io) using the Github Sign-In option with your Github user.
 
 ![acorn-login-screen](https://necessary-creativity-bc071c3082.media.strapiapp.com/login_screen_6fde8a8572.png)
 
 After the installation of Acorn CLI for your OS, you can login to the Acorn platform.
 
 ```
-acorn login beta.acorn.io
+acorn login
 ```
 
 ## Deploy your Piwigo application
